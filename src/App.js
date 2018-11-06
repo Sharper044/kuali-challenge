@@ -3,9 +3,9 @@ import './App.css';
 
 class App extends Component {
   state = {
-    requestArr = [],
-    noOfFloors = 1,
-    noOfElevators = 1,
+    requestArr: [],
+    noOfFloors: 1,
+    noOfElevators: 1,
   }
 
   changeNumberOf(number, type) {
