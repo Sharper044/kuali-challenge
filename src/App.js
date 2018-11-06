@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  state = {
+    requestArr = [],
+    noOfFloors = 1,
+    noOfElevators = 1,
+  }
+
+  changeNumberOf(number, type) {
+    if (number >= 1) {
+      this.setState({ [type]: Math.floor(number) }); // In there in case a non-integer is used. type must be 'noOfFloors' or 'noOfElevators'
+    }
+  }
+
+  // This method can be called by any floor at any time to request an elevator lift.
+  makeRequest(startFloor, endFloor) {
+
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
       </div>
     );
   }
