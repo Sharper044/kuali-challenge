@@ -19,6 +19,8 @@ class App extends Component {
 
   }
 
+  //methods to manage requests and maintenance still need to be put in place.
+
   render() {
     return (
       <div className="App">
